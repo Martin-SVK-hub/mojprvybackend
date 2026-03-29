@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Študenti</title>
+</head>
+<body>
+
+    <h1>Zoznam študentov</h1>
+
+    <button onclick="loadStudents()">Načítať študentov</button>
+
+    <ul id="students"></ul>
+
+    <script>
+        async function loadStudents() {
+            const response = await fetch('/api')
+            const data = await response.json()
+
+            const list = document.getElementById("students")
+            list.innerHTML = ""
+
+            data.students.forEach(student => {
+                const li = document.createElement("li")
+                li.textContent = student.name + " " + student.surname
+                list.appendChild(li)
+            })
+        }
+    </script>
+
+</body>
+</html>
