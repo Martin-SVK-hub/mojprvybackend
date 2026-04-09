@@ -1,1 +1,2 @@
-Na spustenie tohto kódu, otvor backend a klikni v pravom hornom rohu na šípku a klikni na IP adresu čo sa ti zobrazí v termináli.
+Flask, jsonify, 
+render_template
