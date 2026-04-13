@@ -1,7 +1,8 @@
 from flask import Flask, jsonify, render_template
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 
 # základná route
 @app.route('/')
