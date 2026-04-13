@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, 
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ CORS(app)
 # základná route
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return 'fea'
  
 databaza = {
     "students": [
